@@ -16,6 +16,6 @@ public class Movement : MonoBehaviour {
         Vector3 velocity = direction * speed;
         Vector3 moveAmount = velocity * Time.deltaTime;
 
-        transform.position += moveAmount;
+        transform.Translate(moveAmount);
 	}
 }
