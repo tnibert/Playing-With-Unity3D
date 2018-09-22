@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour {
         Vector3 velocity = direction * speed;
         Vector3 moveAmount = velocity * Time.deltaTime;
 
-        transform.Translate(moveAmount);
+        // ok, I think to move in a direction it is direction * deltatime * speed
+		transform.Translate(moveAmount, Space.World);
 	}
 }
