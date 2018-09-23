@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
 	public float speed = 6;
 	Rigidbody myRigidbody;      // for physics
 	Vector3 velocity;           // this default initializes to zero?
+	int coinCount = 0;
     
 	// Use this for initialization
 	void Start () {
@@ -22,5 +23,17 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate() {
 		myRigidbody.position += velocity * Time.fixedDeltaTime;
+	}
+
+	void OnTriggerEnter(Collider triggerCollider)
+    // oh no he didn't
+	{
+		print(triggerCollider.gameObject.name);
+		if (triggerCollider.tag == "Coin")
+		{
+			Destroy(triggerCollider.gameObject);
+			coinCount++;
+			print(coinCount);
+		}
 	}
 }
