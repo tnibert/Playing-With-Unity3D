@@ -10,9 +10,15 @@ public class FallingBlock : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector3.down * speed * Time.deltaTime);     // if we add Space.World it will not move in the direction of its rotation
+		print(transform.position.y);
+		if (transform.position.y < -Camera.main.orthographicSize)
+		{
+			print("hi");
+			Destroy(this.gameObject);
+		}
 	}
 }

@@ -143,6 +143,8 @@ MonoBehaviour:
   blockPrefab: {fileID: 1470239202772090, guid: e405f3f1045864419b208e66c449a0ca,
     type: 2}
   spawnDelaySec: 1
+  minsize: 0.3
+  maxsize: 2.3
 --- !u!4 &107079236
 Transform:
   m_ObjectHideFlags: 0
@@ -243,8 +245,9 @@ GameObject:
   - component: {fileID: 1841941148}
   - component: {fileID: 1841941147}
   - component: {fileID: 1841941146}
-  - component: {fileID: 1841941145}
   - component: {fileID: 1841941144}
+  - component: {fileID: 1841941149}
+  - component: {fileID: 1841941145}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -264,18 +267,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
---- !u!65 &1841941145
-BoxCollider:
+--- !u!50 &1841941145
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841941143}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!23 &1841941146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -331,3 +342,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1841941149
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841941143}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

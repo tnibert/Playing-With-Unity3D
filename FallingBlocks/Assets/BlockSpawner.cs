@@ -12,7 +12,7 @@ public class BlockSpawner : MonoBehaviour {
 	public float minsize = 0.3f;
 	public float maxsize = 1.7f;
     
-	float spawnAngleMax = 30f;
+	float spawnAngleMax = 20f;
 
 	Vector2 screenHalfSize;
     
